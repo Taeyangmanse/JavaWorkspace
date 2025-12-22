@@ -8,22 +8,22 @@ public class CastingPractice
 	
 	public void practice1()
 	{
-		System.out.print("±¹¾î : ");
+		System.out.print("êµ­ì–´ : ");
 		float a = sc.nextFloat();
 		sc.nextLine();
 		
-		System.out.print("¿µ¾î : ");
+		System.out.print("ì˜ì–´ : ");
 		float b = sc.nextFloat();
 		sc.nextLine();
 		
-		System.out.print("¼öÇĞ : ");
+		System.out.print("ìˆ˜í•™ : ");
 		float c = sc.nextFloat();
 		sc.nextLine();
 		
 		int hap = (int)(a + b + c);
 		int ave = hap / 3;
 		
-		System.out.println("ÃÑÁ¡ : " + hap);
-		System.out.println("Æò±Õ : " + ave);
+		System.out.println("ì´ì  : " + hap);
+		System.out.println("í‰ê·  : " + ave);
 	}
 }

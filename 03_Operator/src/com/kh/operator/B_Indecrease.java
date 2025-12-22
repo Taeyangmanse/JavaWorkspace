@@ -3,44 +3,44 @@ package com.kh.operator;
 public class B_Indecrease 
 {
 	/*
-	 * Áõ°¨ ¿¬»êÀÚ (´ÜÇ× ¿¬»êÀÚ)
-	 * ++ : º¯¼ö¿¡ ´ã±ä °ªÀ» 1 Áõ°¡
-	 * 	-> ÀüÀ§ ¿¬»êÀÚ : ++º¯¼ö
-	 * 	-> ÈÄÀ§ ¿¬»êÀÚ : º¯¼ö++
+	 * ì¦ê° ì—°ì‚°ì (ë‹¨í•­ ì—°ì‚°ì)
+	 * ++ : ë³€ìˆ˜ì— ë‹´ê¸´ ê°’ì„ 1 ì¦ê°€
+	 * 	-> ì „ìœ„ ì—°ì‚°ì : ++ë³€ìˆ˜
+	 * 	-> í›„ìœ„ ì—°ì‚°ì : ë³€ìˆ˜++
 	 * 
-	 * -- : º¯¼ö¿¡ ´ã±ä °ªÀ» 1 °¨¼Ò
-	 * 	-> ÀüÀ§ ¿¬»êÀÚ : --º¯¼ö
-	 * 	-> ÈÄÀ§ ¿¬»êÀÚ : º¯¼ö--
+	 * -- : ë³€ìˆ˜ì— ë‹´ê¸´ ê°’ì„ 1 ê°ì†Œ
+	 * 	-> ì „ìœ„ ì—°ì‚°ì : --ë³€ìˆ˜
+	 * 	-> í›„ìœ„ ì—°ì‚°ì : ë³€ìˆ˜--
 	 */
 	
 	public void method1()
 	{
 		int num = 10;
-		System.out.println("ÀüÀ§ Áõ°¨¿¬»êÀÚ Àû¿ë Àü : " + num);	// 10
-		System.out.println("1È¸ ¼öÇà : " + ++num);	// 11
-		System.out.println("2È¸ ¼öÇà : " + ++num);	// 12
-		System.out.println("3È¸ ¼öÇà : " + ++num);	// 13
-		System.out.println("ÃÖÁ¾ num : " + num);	// 13
+		System.out.println("ì „ìœ„ ì¦ê°ì—°ì‚°ì ì ìš© ì „ : " + num);	// 10
+		System.out.println("1íšŒ ìˆ˜í–‰ : " + ++num);	// 11
+		System.out.println("2íšŒ ìˆ˜í–‰ : " + ++num);	// 12
+		System.out.println("3íšŒ ìˆ˜í–‰ : " + ++num);	// 13
+		System.out.println("ìµœì¢… num : " + num);	// 13
 		
 		int num2 = 10;
-		System.out.println("ÀüÀ§ Áõ°¨¿¬»êÀÚ Àû¿ë Àü : " + num2);	// 10
-		System.out.println("1È¸ ¼öÇà : " + num2++);	// 10(11)
-		System.out.println("2È¸ ¼öÇà : " + num2++);	// 11(12)
-		System.out.println("3È¸ ¼öÇà : " + num2++);	// 12(13)
-		System.out.println("ÃÖÁ¾ num2 : " + num2);	// 13
+		System.out.println("ì „ìœ„ ì¦ê°ì—°ì‚°ì ì ìš© ì „ : " + num2);	// 10
+		System.out.println("1íšŒ ìˆ˜í–‰ : " + num2++);	// 10(11)
+		System.out.println("2íšŒ ìˆ˜í–‰ : " + num2++);	// 11(12)
+		System.out.println("3íšŒ ìˆ˜í–‰ : " + num2++);	// 12(13)
+		System.out.println("ìµœì¢… num2 : " + num2);	// 13
 		
 	}
 	
 	public void method2()
 	{
-		// ÀüÀ§ ¿¬»ê
+		// ì „ìœ„ ì—°ì‚°
 		int a = 10;
 		int b = ++a;
 		
 		System.out.println("a : " + a);
 		System.out.println("b : " + b);
 		
-		// ÈÄÀ§ ¿¬»ê
+		// í›„ìœ„ ì—°ì‚°
 		int c = 10;
 		int d = c++;
 		

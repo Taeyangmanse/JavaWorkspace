@@ -8,16 +8,16 @@ public class VariablePractice4
 	
 	public void practice4() 
 	{
-		System.out.print("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		String str = sc.nextLine();
 		
 		char a = str.charAt(0);
-		System.out.println("Ã¹ ¹øÂ° ¹®ÀÚ : " + a);
+		System.out.println("ì²« ë²ˆì§¸ ë¬¸ì : " + a);
 		
 		char b = str.charAt(1);
-		System.out.println("µÎ ¹øÂ° ¹®ÀÚ : " + b);
+		System.out.println("ë‘ ë²ˆì§¸ ë¬¸ì : " + b);
 		
 		char c = str.charAt(2);
-		System.out.println("¼¼ ¹øÂ° ¹®ÀÚ : " + c);
+		System.out.println("ì„¸ ë²ˆì§¸ ë¬¸ì : " + c);
 	}
 }

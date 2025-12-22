@@ -5,33 +5,33 @@ import java.util.Scanner;
 public class D_Logical 
 {
 	/*
-	 * ³í¸® ¿¬»êÀÚ
-	 * -> bool °ªÀ» ¹ÝÈ¯ÇÏ´Â ¿¬»êÀ» ¼öÇà
-	 * -> ³í¸® °ª µÎ°³¸¦ ºñ±³ÇÔ
-	 * AND : &&	-> µÎ °ª ¸ðµÎ ÂüÀÏ °æ¿ì true ¹ÝÈ¯
-	 * 			-> µÎ °ª Áß ÇÏ³ª¶óµµ °ÅÁþÀÏ °æ¿ì false ¹ÝÈ¯
-	 * OR : ||	-> µÎ °ª Áß ÇÏ³ª¶óµµ ÂüÀÏ °æ¿ì true ¹ÝÈ¯
-	 * 			-> µÎ °ª ¸ðµÎ °ÅÁþÀÏ °æ¿ì false ¹ÝÈ¯
+	 * ë…¼ë¦¬ ì—°ì‚°ìž
+	 * -> bool ê°’ì„ ë°˜í™˜í•˜ëŠ” ì—°ì‚°ì„ ìˆ˜í–‰
+	 * -> ë…¼ë¦¬ ê°’ ë‘ê°œë¥¼ ë¹„êµí•¨
+	 * AND : &&	-> ë‘ ê°’ ëª¨ë‘ ì°¸ì¼ ê²½ìš° true ë°˜í™˜
+	 * 			-> ë‘ ê°’ ì¤‘ í•˜ë‚˜ë¼ë„ ê±°ì§“ì¼ ê²½ìš° false ë°˜í™˜
+	 * OR : ||	-> ë‘ ê°’ ì¤‘ í•˜ë‚˜ë¼ë„ ì°¸ì¼ ê²½ìš° true ë°˜í™˜
+	 * 			-> ë‘ ê°’ ëª¨ë‘ ê±°ì§“ì¼ ê²½ìš° false ë°˜í™˜
 	 */
 	
 	Scanner sc = new Scanner(System.in);
 	
 	public void method1()
 	{
-		System.out.print("¼ýÀÚ¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ìˆ«ìžë¥¼ í•˜ë‚˜ ìž…ë ¥í•˜ì„¸ìš” : ");
 		int num = sc.nextInt();
 		sc.nextLine();
 		
-		// numÀÇ °ªÀÌ 0º¸´Ù Å©¸é¼­ Â¦¼öÀÎ°¡?
-		boolean result = (num > 0) && (num % 2 == 0);	// ³í¸® ¿¬»êÀÚ´Â ¾îÂ÷ÇÇ ¿ì¼±¼øÀ§°¡ ³·¾Æ¼­ °ýÈ£¸¦ Ä¡Áö ¾Ê¾Æµµ µÇÁö¸¸ °¡µ¶¼ºÀ» À§ÇØ °ýÈ£·Î ±¸ºÐÇÏ´Â °Íµµ ³ª»ÚÁö ¾ÊÀº ¹æ¹ýÀÌ´Ù.
+		// numì˜ ê°’ì´ 0ë³´ë‹¤ í¬ë©´ì„œ ì§ìˆ˜ì¸ê°€?
+		boolean result = (num > 0) && (num % 2 == 0);	// ë…¼ë¦¬ ì—°ì‚°ìžëŠ” ì–´ì°¨í”¼ ìš°ì„ ìˆœìœ„ê°€ ë‚®ì•„ì„œ ê´„í˜¸ë¥¼ ì¹˜ì§€ ì•Šì•„ë„ ë˜ì§€ë§Œ ê°€ë…ì„±ì„ ìœ„í•´ ê´„í˜¸ë¡œ êµ¬ë¶„í•˜ëŠ” ê²ƒë„ ë‚˜ì˜ì§€ ì•Šì€ ë°©ë²•ì´ë‹¤.
 	}
 	
 	public void method2()
 	{
-		// ÀÔ·ÂÇÑ °ªÀÌ 1 ÀÌ»ó 100 ÀÌÇÏÀÇ ¼ýÀÚÀÎÁö È®ÀÎ
-		// 1 <= x <= 100 (¹¹ ¿ì¸®°¡ °è»êÇÒ ¶© ÀÌ·¸°Ô ½áµµ µÇÁö¸¸ ÄÄÇ»ÅÍ´Â ¸ÛÃ»ÇØ¼­ ÀÌ·¸°Ô ¾²¸é ¸ð¸¥´Ù)
+		// ìž…ë ¥í•œ ê°’ì´ 1 ì´ìƒ 100 ì´í•˜ì˜ ìˆ«ìžì¸ì§€ í™•ì¸
+		// 1 <= x <= 100 (ë­ ìš°ë¦¬ê°€ ê³„ì‚°í•  ë• ì´ë ‡ê²Œ ì¨ë„ ë˜ì§€ë§Œ ì»´í“¨í„°ëŠ” ë©ì²­í•´ì„œ ì´ë ‡ê²Œ ì“°ë©´ ëª¨ë¥¸ë‹¤)
 		
-		System.out.print("Á¤¼ö : ");
+		System.out.print("ì •ìˆ˜ : ");
 		int num = sc.nextInt();
 		sc.nextLine();
 		
@@ -39,8 +39,8 @@ public class D_Logical
 	}
 	public void method3()
 	{
-		// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀÌ y°Å³ª YÀÎ °æ¿ì Âü, ¾Æ´Ï¸é °ÅÁþÀ» ¹ÝÈ¯
-		System.out.print("ÀÔ·Â : ");
+		// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ê°’ì´ yê±°ë‚˜ Yì¸ ê²½ìš° ì°¸, ì•„ë‹ˆë©´ ê±°ì§“ì„ ë°˜í™˜
+		System.out.print("ìž…ë ¥ : ");
 		char ch = sc.next().charAt(0);
 		
 		boolean result = (1 == 'y') || (ch == 'Y');
@@ -53,16 +53,16 @@ public class D_Logical
 		System.out.println("result1 : " + result1);
 		System.out.println(num1);	// 10
 		
-		// AND ¿¬»êÀÚÀÇ °æ¿ì A && BÀÇ Á¶°Ç Áß AÀÇ °ªÀÌ falseÀÎ °æ¿ì
-		// µÚ ÂÊ Á¶°ÇµéÀÌ ¹¹µç ÀÌ¹Ì falseÀÌ±â ¶§¹®¿¡ µÚÂÊ Á¶°Ç½ÄÀº ½ÇÇàÇÏÁö ¾Ê´Â´Ù.
-		// ÀÌ¸¦ ¼ôÄÆ ÀÍ½ºÇÁ·¹¼Ç(Short-circuit Expression)¶ó°í ÇÑ´Ù.
+		// AND ì—°ì‚°ìžì˜ ê²½ìš° A && Bì˜ ì¡°ê±´ ì¤‘ Aì˜ ê°’ì´ falseì¸ ê²½ìš°
+		// ë’¤ ìª½ ì¡°ê±´ë“¤ì´ ë­ë“  ì´ë¯¸ falseì´ê¸° ë•Œë¬¸ì— ë’¤ìª½ ì¡°ê±´ì‹ì€ ì‹¤í–‰í•˜ì§€ ì•ŠëŠ”ë‹¤.
+		// ì´ë¥¼ ìˆì»· ìµìŠ¤í”„ë ˆì…˜(Short-circuit Expression)ë¼ê³  í•œë‹¤.
 		
 		int num2 = 10;
 		boolean result2 = num2 < 20 || ++num2 > 0;
 		System.out.println(num2);	// 10
 		
-		// OR ¿¬»êÀÚµµ ¸¶Âù°¡Áö·Î A || BÀÇ Á¶°Ç Áß AÀÇ °ªÀÌ trueÀÎ °æ¿ì
-		// µÚ ÂÊ Á¶°ÇµéÀÌ ¹¹µç ÀÌ¹Ì true ÀÌ±â ¶§¹®¿¡ µÚÂÊ Á¶°Ç½ÄÀº ½ÇÇàÇÏÁö ¾Ê´Â´Ù.
+		// OR ì—°ì‚°ìžë„ ë§ˆì°¬ê°€ì§€ë¡œ A || Bì˜ ì¡°ê±´ ì¤‘ Aì˜ ê°’ì´ trueì¸ ê²½ìš°
+		// ë’¤ ìª½ ì¡°ê±´ë“¤ì´ ë­ë“  ì´ë¯¸ true ì´ê¸° ë•Œë¬¸ì— ë’¤ìª½ ì¡°ê±´ì‹ì€ ì‹¤í–‰í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		
 	}
 }

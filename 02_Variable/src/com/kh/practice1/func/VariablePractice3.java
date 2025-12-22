@@ -8,18 +8,18 @@ public class VariablePractice3
 	
 	public void practice3() 
 	{
-		System.out.print("∞°∑Œ : ");
+		System.out.print("Í∞ÄÎ°ú : ");
 		float width = sc.nextFloat();
 		sc.nextLine();
 		
-		System.out.print("ºº∑Œ : ");
+		System.out.print("ÏÑ∏Î°ú : ");
 		float height = sc.nextFloat();
 		sc.nextLine();
 		
 		float extant = width * height;
 		float perimeter = (width + height) * 2;
 		
-		System.out.println("∏È¿˚ : " + extant);
-		System.out.println("µ—∑π : " + perimeter);
+		System.out.println("Î©¥Ï†Å : " + extant);
+		System.out.println("ÎëòÎ†à : " + perimeter);
 	}
 }

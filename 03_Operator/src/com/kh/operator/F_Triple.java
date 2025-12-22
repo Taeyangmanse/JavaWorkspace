@@ -3,24 +3,24 @@ package com.kh.operator;
 public class F_Triple 
 {
 	/*
-	 * »ïÇ× ¿¬»êÀÚ
-	 * Á¶°Ç½Ä ? ÂüÀÏ °æ¿ì : °ÅÁþÀÏ °æ¿ì;
+	 * ì‚¼í•­ ì—°ì‚°ìž
+	 * ì¡°ê±´ì‹ ? ì°¸ì¼ ê²½ìš° : ê±°ì§“ì¼ ê²½ìš°;
 	 */
 	public void method1()
 	{
 		int num = 50;
 		
-		// numÀÇ °ªÀÌ ¾ç¼öÀÎÁö ¾Æ´ÑÁö ÆÇ´Ü
+		// numì˜ ê°’ì´ ì–‘ìˆ˜ì¸ì§€ ì•„ë‹Œì§€ íŒë‹¨
 		boolean result = num > 0 ? true : false;
-		System.out.println((result ? "¾ç¼ö" : "À½¼ö") + "ÀÔ´Ï´Ù.");
+		System.out.println((result ? "ì–‘ìˆ˜" : "ìŒìˆ˜") + "ìž…ë‹ˆë‹¤.");
 	}
 	
 	public void method2()
 	{
 		int num = 0;
 		
-		// numÀÇ °ªÀÌ ¾ç¼ö, À½¼ö, 0 Áß ¹«¾ùÀÎÁö ÆÇ´Ü
-		String result = num > 0 ? "¾ç¼ö" : (num < 0 ? "À½¼ö" : "0");
-		System.out.println(result + "ÀÔ´Ï´Ù.");
+		// numì˜ ê°’ì´ ì–‘ìˆ˜, ìŒìˆ˜, 0 ì¤‘ ë¬´ì—‡ì¸ì§€ íŒë‹¨
+		String result = num > 0 ? "ì–‘ìˆ˜" : (num < 0 ? "ìŒìˆ˜" : "0");
+		System.out.println(result + "ìž…ë‹ˆë‹¤.");
 	}
 }

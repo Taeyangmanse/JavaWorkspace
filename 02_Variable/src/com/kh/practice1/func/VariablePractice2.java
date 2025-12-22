@@ -8,24 +8,24 @@ public class VariablePractice2
 	
 	public void practice2()
 	{
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ : ");
 		int num1 = sc.nextInt();
 		sc.nextLine();
 		
-		System.out.print("µÎ ¹øÂ° Á¤¼ö : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ : ");
 		int num2 = sc.nextInt();
 		sc.nextLine();
 		
 		int hap = num1 + num2;
-		System.out.println("´õÇÏ±â °á°ú : " + hap);
+		System.out.println("ë”í•˜ê¸° ê²°ê³¼ : " + hap);
 		
 		int min = num1 - num2;
-		System.out.println("»©±â °á°ú : " + min);
+		System.out.println("ë¹¼ê¸° ê²°ê³¼ : " + min);
 		
 		int gop = num1 * num2;
-		System.out.println("°öÇÏ±â °á°ú : " + gop);
+		System.out.println("ê³±í•˜ê¸° ê²°ê³¼ : " + gop);
 		
 		int na = num1 / num2;
-		System.out.println("³ª´©±â °á°ú : " + na);
+		System.out.println("ë‚˜ëˆ„ê¸° ê²°ê³¼ : " + na);
 	}
 }

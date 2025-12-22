@@ -3,21 +3,21 @@ package com.kh.variable;
 public class B_Cast 
 {
 	/*
-	 * (ÀÚ·á)Çü º¯È¯: °ªÀÇ ÀÚ·áÇüÀ» ¹Ù²Ù´Â °³³ä
+	 * (ìžë£Œ)í˜• ë³€í™˜: ê°’ì˜ ìžë£Œí˜•ì„ ë°”ê¾¸ëŠ” ê°œë…
 	 * 
-	 * ÄÄÇ»ÅÍÀÇ °ª Ã³¸® ±ÔÄ¢
-	 * 1. °ª ³¢¸® ¿¬»êÇÒ ¶§´Â Ç×»ó °°Àº ÀÚ·áÇüÀ¸·Î¸¸ ¿¬»êÇØ¾ß ÇÑ´Ù.
-	 * = (´ëÀÔ ¿¬»êÀÚ)µµ ¸¶Âù°¡Áö·Î ¿ÞÂÊ°ú ¿À¸¥ÂÊÀÇ ÀÚ·áÇüÀÌ °°¾Æ¾ß ÇÑ´Ù.
-	 * ¸¸¾à, ¿ÞÂÊ ¿À¸¥ÂÊÀÇ ÀÚ·áÇüÀÌ ¼­·Î ´Ù¸£´Ù¸é, ÇÑ ÂÊÀ» Çüº¯È¯ ÇØÁà¾ß ÇÑ´Ù.
+	 * ì»´í“¨í„°ì˜ ê°’ ì²˜ë¦¬ ê·œì¹™
+	 * 1. ê°’ ë¼ë¦¬ ì—°ì‚°í•  ë•ŒëŠ” í•­ìƒ ê°™ì€ ìžë£Œí˜•ìœ¼ë¡œë§Œ ì—°ì‚°í•´ì•¼ í•œë‹¤.
+	 * = (ëŒ€ìž… ì—°ì‚°ìž)ë„ ë§ˆì°¬ê°€ì§€ë¡œ ì™¼ìª½ê³¼ ì˜¤ë¥¸ìª½ì˜ ìžë£Œí˜•ì´ ê°™ì•„ì•¼ í•œë‹¤.
+	 * ë§Œì•½, ì™¼ìª½ ì˜¤ë¥¸ìª½ì˜ ìžë£Œí˜•ì´ ì„œë¡œ ë‹¤ë¥´ë‹¤ë©´, í•œ ìª½ì„ í˜•ë³€í™˜ í•´ì¤˜ì•¼ í•œë‹¤.
 	 * 
-	 * Çü º¯È¯ÀÇ Á¾·ù
-	 * 1. ÀÚµ¿ Çüº¯È¯ (¹¬½ÃÀû Çüº¯È¯)
-	 * : ÀÚµ¿À¸·Î Çüº¯È¯ÀÌ ÁøÇàµÇ±â ¶§¹®¿¡ ³»°¡ Á÷Á¢ Çüº¯È¯ ÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
-	 * (ÀÛÀº Å©±âÀÇ ÀÚ·áÇü -> Å©±â°¡ Å« ÀÚ·áÇü)
+	 * í˜• ë³€í™˜ì˜ ì¢…ë¥˜
+	 * 1. ìžë™ í˜•ë³€í™˜ (ë¬µì‹œì  í˜•ë³€í™˜)
+	 * : ìžë™ìœ¼ë¡œ í˜•ë³€í™˜ì´ ì§„í–‰ë˜ê¸° ë•Œë¬¸ì— ë‚´ê°€ ì§ì ‘ í˜•ë³€í™˜ í•  í•„ìš”ê°€ ì—†ë‹¤.
+	 * (ìž‘ì€ í¬ê¸°ì˜ ìžë£Œí˜• -> í¬ê¸°ê°€ í° ìžë£Œí˜•)
 	 * 
-	 * 2. °­Á¦ Çüº¯È¯ (¸í½ÃÀû Çüº¯È¯)
-	 * : ÀÚµ¿ Çüº¯È¯ÀÌ ºÒ°¡´ÉÇÑ °æ¿ì, ³»°¡ Á÷Á¢ Çüº¯È¯ ¿¬»êÀÚ¸¦ »ç¿ëÇÏ¿© º¯È¯.
-	 * (Å©±â°¡ Å« ÀÚ·áÇü -> ÀÛÀº Å©±âÀÇ ÀÚ·áÇü)
+	 * 2. ê°•ì œ í˜•ë³€í™˜ (ëª…ì‹œì  í˜•ë³€í™˜)
+	 * : ìžë™ í˜•ë³€í™˜ì´ ë¶ˆê°€ëŠ¥í•œ ê²½ìš°, ë‚´ê°€ ì§ì ‘ í˜•ë³€í™˜ ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•˜ì—¬ ë³€í™˜.
+	 * (í¬ê¸°ê°€ í° ìžë£Œí˜• -> ìž‘ì€ í¬ê¸°ì˜ ìžë£Œí˜•)
 	 */
 	
 	public void autoCasting()
@@ -27,7 +27,7 @@ public class B_Cast
 		
 		int i1 = 10;
 		
-		// ¹¬½ÃÀûÀ¸·Î double ÀÚ·áÇüÀ¸·Î Çüº¯È¯
+		// ë¬µì‹œì ìœ¼ë¡œ double ìžë£Œí˜•ìœ¼ë¡œ í˜•ë³€í™˜
 		double d1 = i1;
 		
 		System.out.println("d1: " + d1);
@@ -35,7 +35,7 @@ public class B_Cast
 		int i2 = 1000;
 		double d2 = 3.3;
 		
-		// ¹¬½ÃÀûÀ¸·Î double ÀÚ·áÇüÀ¸·Î Çüº¯È¯
+		// ë¬µì‹œì ìœ¼ë¡œ double ìžë£Œí˜•ìœ¼ë¡œ í˜•ë³€í™˜
 		double result = i2 + d2;
 		
 		System.out.println(result);
@@ -45,33 +45,33 @@ public class B_Cast
 		
 		int i3 = 1000;
 		
-		// ¹¬½ÃÀûÀ¸·Î long ÀÚ·áÇüÀ¸·Î Çüº¯È¯
+		// ë¬µì‹œì ìœ¼ë¡œ long ìžë£Œí˜•ìœ¼ë¡œ í˜•ë³€í™˜
 		long l3 = i3;
 		
-		// 3. (Æ¯ÀÌ ÄÉÀÌ½º), long -> float
+		// 3. (íŠ¹ì´ ì¼€ì´ìŠ¤), long -> float
 		// 8 -> 4
 		
-		// ½Ç¼ö´Â Áö¼ö Ç¥±â¹ýÀ» »ç¿ëÇÏ±â ¶§¹®¿¡ long ÀÚ·áÇüº¸´Ù ´ãÀ» ¼ö ÀÖ´Â "°ªÀÇ ¹üÀ§"°¡ ÈÎ¾À Å©´Ù!!
+		// ì‹¤ìˆ˜ëŠ” ì§€ìˆ˜ í‘œê¸°ë²•ì„ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì— long ìžë£Œí˜•ë³´ë‹¤ ë‹´ì„ ìˆ˜ ìžˆëŠ” "ê°’ì˜ ë²”ìœ„"ê°€ í›¨ì”¬ í¬ë‹¤!!
 		long l4 = 10000000000L;
 		float f4 = l4;
 		
-		// 4. (Æ¯ÀÌ ÄÉÀÌ½º), char <-> int 
+		// 4. (íŠ¹ì´ ì¼€ì´ìŠ¤), char <-> int 
 		// 2 <-> 4
 		
 		char ch = 65;
 		// 65 == 'A'
 		System.out.println("ch: " + ch);
 		
-		int num = '¹Î';
+		int num = 'ë¯¼';
 		System.out.println("num: " + num);
 		
-		// 5. (Æ¯ÀÌ ÄÉÀÌ½º), byte¿Í short
+		// 5. (íŠ¹ì´ ì¼€ì´ìŠ¤), byteì™€ short
 		
 		byte b1 = 12;
 		byte b2 = 17;
 		
-		// byte¿Í byteÀÇ ¿¬»ê, short¿Í short°£ÀÇ ¿¬»ê °á°ú´Â Ç×»ó int·Î Ãë±ÞÇÑ´Ù!
-		// byte b3 = b1 + b2; -> error ¹ß»ý0	
+		// byteì™€ byteì˜ ì—°ì‚°, shortì™€ shortê°„ì˜ ì—°ì‚° ê²°ê³¼ëŠ” í•­ìƒ intë¡œ ì·¨ê¸‰í•œë‹¤!
+		// byte b3 = b1 + b2; -> error ë°œìƒ0	
 		byte b3 = (byte)(b1 +b2);
 	}
 	
@@ -86,20 +86,20 @@ public class B_Cast
 		
 		// 2. double -> int 
 		double d3 = 10.89;
-		// ¼Ò¼ýÁ¡¿¡ ÀúÀåµÈ °ªÀº À¯½ÇµÈ´Ù.
+		// ì†Œìˆ«ì ì— ì €ìž¥ëœ ê°’ì€ ìœ ì‹¤ëœë‹¤.
 		int i3 = (int)d3;
 		System.out.println("i3: " + i3);
 		
 		int iNum = 10;
 		double dNum = 5.89;
 		
-		// int iSum = iNum + dNum; -> error ¹ß»ý
-		// intÇü°ú doubleÇüÀÌ ´õÇØÁö¸é doubleÇüÀÌ µÇ±â ¶§¹® 
+		// int iSum = iNum + dNum; -> error ë°œìƒ
+		// intí˜•ê³¼ doubleí˜•ì´ ë”í•´ì§€ë©´ doubleí˜•ì´ ë˜ê¸° ë•Œë¬¸ 
 		
-		// ÇØ°á¹æ¹ý 1. ¿¬»ê°á°ú¸¦ int¿¡ ¸ÂÃç ¸í½ÃÀû Çüº¯È¯
+		// í•´ê²°ë°©ë²• 1. ì—°ì‚°ê²°ê³¼ë¥¼ intì— ë§žì¶° ëª…ì‹œì  í˜•ë³€í™˜
 		int iSum1 = (int)(iNum + dNum);
 		
-		// ÇØ°á¹æ¹ý 2. µ¡¼À ¿¬»ê Àü¿¡ dNumÀ» int·Î ¸í½ÃÀû Çüº¯È¯
+		// í•´ê²°ë°©ë²• 2. ë§ì…ˆ ì—°ì‚° ì „ì— dNumì„ intë¡œ ëª…ì‹œì  í˜•ë³€í™˜
 		int iSum2 = iNum + (int)dNum;
 	}
 	

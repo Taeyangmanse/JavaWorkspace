@@ -1,49 +1,49 @@
 package com.kh.variable;
 
-//»ç¿ëÀÚ°¡ Å°º¸µå·Î Á÷Á¢ ÀÔ·ÂÇÑ °ªÀ» º¯¼ö¿¡ ÀúÀåÇÒ ¼ö ÀÖ°Ô µµ¿ÍÁÖ´Â Å¬·¡½º
+//ì‚¬ìš©ìžê°€ í‚¤ë³´ë“œë¡œ ì§ì ‘ ìž…ë ¥í•œ ê°’ì„ ë³€ìˆ˜ì— ì €ìž¥í•  ìˆ˜ ìžˆê²Œ ë„ì™€ì£¼ëŠ” í´ëž˜ìŠ¤
 import java.util.Scanner;
 
 public class C_Scanner 
 {
 	public void inputTest1()
 	{
-		// java°¡ ±âº»ÀûÀ¸·Î °¡Áö°í ÀÖ´Â ³»ÀåÇÔ¼ö
+		// javaê°€ ê¸°ë³¸ì ìœ¼ë¡œ ê°€ì§€ê³  ìžˆëŠ” ë‚´ìž¥í•¨ìˆ˜
 		Scanner sc = new Scanner(System.in);
 		
-		// »ç¿ëÀÚÀÇ ÀÎÀû»çÇ× Á¤º¸ ÀÔ·Â¹Þ±â
-		System.out.print("´ç½ÅÀÇ ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+		// ì‚¬ìš©ìžì˜ ì¸ì ì‚¬í•­ ì •ë³´ ìž…ë ¥ë°›ê¸°
+		System.out.print("ë‹¹ì‹ ì˜ ì´ë¦„ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”: ");
 		
-		// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» "¹®ÀÚ¿­"·Î ¹Þ¾Æ¿À´Â ¸Þ¼­µå
-		// 1. nextLine(): »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» "¿£ÅÍ"¸¦ ±âÁØÀ¸·Î ¸ðµÎ °¡Á®¿À´Â ¸Þ¼­µå
-		// (°ªÀ» °¡Á®¿Â ÈÄ °³Çà¹®ÀÚ´Â ÀÚµ¿À¸·Î ºñ¿öÁØ´Ù.)
+		// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ê°’ì„ "ë¬¸ìžì—´"ë¡œ ë°›ì•„ì˜¤ëŠ” ë©”ì„œë“œ
+		// 1. nextLine(): ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ê°’ì„ "ì—”í„°"ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ëª¨ë‘ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ
+		// (ê°’ì„ ê°€ì ¸ì˜¨ í›„ ê°œí–‰ë¬¸ìžëŠ” ìžë™ìœ¼ë¡œ ë¹„ì›Œì¤€ë‹¤.)
 		
-		// 2. next(): »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» "°ø¹é" ±âÁØÀ¸·Î °¡Á®¿À´Â ¸Þ¼­µå
+		// 2. next(): ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ê°’ì„ "ê³µë°±" ê¸°ì¤€ìœ¼ë¡œ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ
 		
 		// String name = sc.nextLine();
 		
 		String firstName = sc.next();
-		sc.nextLine();	// next()ÀÇ °³Çà¹®ÀÚ Áö¿öÁÖ±â ÀÛ¾÷ ÇÊ¿ä.
+		sc.nextLine();	// next()ì˜ ê°œí–‰ë¬¸ìž ì§€ì›Œì£¼ê¸° ìž‘ì—… í•„ìš”.
 		String lastName = sc.nextLine();
 		
 		System.out.println(firstName + lastName);
 		
-		System.out.print("´ç½ÅÀÇ ³ªÀÌ´Â ¸î »ì ÀÔ´Ï±î? ");
+		System.out.print("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” ëª‡ ì‚´ ìž…ë‹ˆê¹Œ? ");
 		int age = sc.nextInt();
 		System.out.println(age);
 		
-		System.out.print("´ç½ÅÀÇ Å°´Â ¸î cm ÀÔ´Ï±î? ");
+		System.out.print("ë‹¹ì‹ ì˜ í‚¤ëŠ” ëª‡ cm ìž…ë‹ˆê¹Œ? ");
 		double height = sc.nextDouble();
 		System.out.println(height);
 		
-		// ÀÔ·ÂÇÑ µ¥ÀÌÅÍ¸¦ ¹®ÀÚÇüÀ¸·Î »Ì±â
-		// StringÀÇ charAt(0) -> ¹®ÀÚ¿­ÀÇ Ã¹ ¹øÂ° ±ÛÀÚ¸¦ ¹®ÀÚ·Î »Ì´Â ¸Þ¼­µå
-		System.out.print("´ç½ÅÀÇ ¼ºº°Àº? (M/F)");
+		// ìž…ë ¥í•œ ë°ì´í„°ë¥¼ ë¬¸ìží˜•ìœ¼ë¡œ ë½‘ê¸°
+		// Stringì˜ charAt(0) -> ë¬¸ìžì—´ì˜ ì²« ë²ˆì§¸ ê¸€ìžë¥¼ ë¬¸ìžë¡œ ë½‘ëŠ” ë©”ì„œë“œ
+		System.out.print("ë‹¹ì‹ ì˜ ì„±ë³„ì€? (M/F)");
 		
-		// ¹æ¹ý 1.
+		// ë°©ë²• 1.
 		// char gender = sc.next().charAt(0);
 		
-		// ¹æ¹ý 2.
-		// »ç¿ëÀÚ°¡ ¿©·¯ ±ÛÀÚ¸¦ ÀÔ·ÂÇÒ °ÍÀ» ´ëºñÇØ Ã¹ ¹øÂ° ±ÛÀÚ¸¸À» ¹Þ°Ú´Ù.
+		// ë°©ë²• 2.
+		// ì‚¬ìš©ìžê°€ ì—¬ëŸ¬ ê¸€ìžë¥¼ ìž…ë ¥í•  ê²ƒì„ ëŒ€ë¹„í•´ ì²« ë²ˆì§¸ ê¸€ìžë§Œì„ ë°›ê² ë‹¤.
 		String gender = sc.next();
 		char gender2 = gender.charAt(0);
 		

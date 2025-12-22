@@ -1,19 +1,19 @@
 package com.kh.first;
-// Package + class ¸í == Ç®Å¬·¡½º ¸í
+// Package + class ëª… == í’€í´ë˜ìŠ¤ ëª…
 
-// Date() Å¬·¡½º Ãß°¡
+// Date() í´ë˜ìŠ¤ ì¶”ê°€
 import java.util.Date;
 
 public class MyFirstObject 
 {
-	// ÀÚ¹Ù´Â ½ÇÇàÇÏ±â À§ÇØ ¹İµå½Ã main() ¸Ş¼­µå°¡ Á¸ÀçÇØ¾ß ÇÑ´Ù.
+	// ìë°”ëŠ” ì‹¤í–‰í•˜ê¸° ìœ„í•´ ë°˜ë“œì‹œ main() ë©”ì„œë“œê°€ ì¡´ì¬í•´ì•¼ í•œë‹¤.
 	public static void main(String[] args) 
 	{
-		// System.out.println(): ÄÜ¼ÖÃ¢¿¡ Ãâ·ÂÇÏ´Â ÄÚµå
-		System.out.println("¾È³ç");
+		// System.out.println(): ì½˜ì†”ì°½ì— ì¶œë ¥í•˜ëŠ” ì½”ë“œ
+		System.out.println("ì•ˆë…•");
 		
-		// new Date(): Date() Å¬·¡½ºÀÇ °´Ã¼¸¦ »ı¼º
-		// Date() Å¬·¡½º: ³¯Â¥, ½Ã°£ µîÀÇ Á¤º¸¸¦ ¹Ş¾Æ¿À´Â Å¬·¡½º
+		// new Date(): Date() í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ìƒì„±
+		// Date() í´ë˜ìŠ¤: ë‚ ì§œ, ì‹œê°„ ë“±ì˜ ì •ë³´ë¥¼ ë°›ì•„ì˜¤ëŠ” í´ë˜ìŠ¤
 		System.out.println(new Date());
 	}
 }
