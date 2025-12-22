@@ -246,9 +246,9 @@ public class OperatorPractice
 		System.out.print("C사원의 연봉 : ");
 		int c = sc.nextInt();
 		
-		float aa = a + a * 0.4f;
-		float bb = b + b * 0;
-		float cc = c + c * 0.15f;
+		float aa = a + a * 0.4f;	// = 1.4
+		float bb = b + b * 0;	// = 1.0
+		float cc = c + c * 0.15f;	// 1.15
 		
 		System.out.printf("A사원 연봉/연봉+a : %d/%.1f \n", a, aa);
 		System.out.printf("3000 %s", aa >= 3000 ? "이상 \n" : "미만 \n");
