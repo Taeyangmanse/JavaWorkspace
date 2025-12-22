@@ -333,7 +333,7 @@ public class ControlPractice
 				break;
 				
 			case '/':
-				System.out.printf("%d / %d = %f\n", num1, num2, (float)(num1 / num2));
+				System.out.printf("%d / %d = %f\n", num1, num2, (float)num1 / num2);
 				break;
 				
 			case '%':
