@@ -141,4 +141,51 @@ public class A_For
 		}
 	}
 	
+	public void method8()
+	{
+		/*
+		 *  *****\n
+		 *  *****\n
+		 *  *****\n
+		 *  *****\n
+		 *  중첩 반복문을 이용하여 출력하기
+		 */
+		
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 5; j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void method9()
+	{
+		/*
+		 * 1***\n
+		 * *2**\n
+		 * **3*\n
+		 * ***4\n
+		 * 중첩 반복문을 이용하여 출력하기
+		 */
+		
+		for (int i = 1; i < 5; i++)
+		{
+			for (int j = 1; j < 5; j++)
+			{
+				if (j == i)
+				{
+					System.out.print(i);
+				}
+				else
+				{
+					System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+	}
+	
 }

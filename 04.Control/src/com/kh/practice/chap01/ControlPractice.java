@@ -225,15 +225,13 @@ public class ControlPractice
 		switch (str)
 		{
 		case "관리자":
-			System.out.println("회원관리, 게시글 관리, 게시글 작성, 댓글 작성, 게시글 조회");
-			break;
+			System.out.print("회원관리, 게시글 관리, ");
 			
 		case "회원":
-			System.out.println("게시글 작성, 댓글 작성, 게시글 조회");
-			break;
+			System.out.print("게시글 작성, 댓글 작성, ");
 			
 		case "비회원":
-			System.out.println("게시글 조회");
+			System.out.print("게시글 조회");
 			break;
 			
 		default:
