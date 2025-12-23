@@ -263,6 +263,7 @@ public class LoopPractice
 				System.out.println("프로그램을 종료합니다.");
 				break;
 			}
+			
 			else
 			{
 				System.out.print("정수 1 : ");
