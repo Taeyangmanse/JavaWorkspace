@@ -55,7 +55,11 @@ public class RockPaperScissors
 				System.out.printf("%d전 %d승 %d무 %d패", count, win, bb, def);
 				break;
 			}
-			else if (rsp.equals(rc) || rsp.equals(ss) || rsp.equals(pp))
+			else if (!(rsp.equals(rc) || rsp.equals(ss) || rsp.equals(pp)))
+			{
+				System.out.println("잘못 입력하셨습니다.");
+			}
+			else
 			{
 				switch (rsp)
 				{
@@ -103,10 +107,6 @@ public class RockPaperScissors
 					win++;
 					System.out.println("이겼습니다!");
 				}
-			}
-			else
-			{
-				System.out.println("잘못 입력하셨습니다.");
 			}	
 		}
 	}
