@@ -29,11 +29,16 @@ public class RockPaperScissors
 		
 		while (true)
 		{
+			// 1 ~ 3의 난수 추출
 			int random = (int)(Math.random() * 3 + 1);
+			
+			// 빈 문자열
 			String com = "";
 			
+			// 플레이어 입력을 숫자로 치환할 int형 변수
 			int num = 0;
 			
+			// 컴퓨터가 뽑은 난수를 가위, 바위, 보로 치환
 			switch (random)
 			{
 			case 1:
@@ -47,20 +52,26 @@ public class RockPaperScissors
 				break;
 			}	
 			
+			// 플레이어의 입력 받음
 			System.out.print("가위바위보 : ");
 			String rsp = sc.next();
 			
+			// 만약, 플레이어의 입력이 exit이라면
 			if (rsp.equals("exit"))
 			{
+				// 판수, 승수, 무승부수, 패수 출력 후 탈출
 				System.out.printf("%d전 %d승 %d무 %d패", count, win, bb, def);
 				break;
 			}
+			// 만약, 플레이어의 입력이 가위, 바위, 보가 아닐 때
 			else if (!(rsp.equals(rc) || rsp.equals(ss) || rsp.equals(pp)))
 			{
 				System.out.println("잘못 입력하셨습니다.");
 			}
+			// 정상적인 입력일 때
 			else
 			{
+				// 플레이어의 입력을 숫자로 치환
 				switch (rsp)
 				{
 				case "가위":
@@ -74,33 +85,39 @@ public class RockPaperScissors
 					break;
 				}
 				
+				// 컴퓨터가 낸 수와 플레이어가 낸 수를 출력
 				System.out.println("컴퓨터 : " + com);
 				System.out.printf("%s : %s\n", name, rsp);
 				
+				// 만약, 플레이어가 낸 수와 컴퓨터가 낸 수가 같을 경우
 				if (num == random)
 				{
 					count++;
 					bb++;
 					System.out.println("비겼습니다.");
 				}
+				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 1 큰 경우
 				else if (num > random && num == random + 1)
 				{
 					count++;
 					win++;
 					System.out.println("이겼습니다!");
 				}
+				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 1 작을 경우
 				else if (num < random && num == random - 1)
 				{
 					count++;
 					def++;
 					System.out.println("졌습니다 ㅠㅠ");
 				}
+				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 2 클 경우
 				else if (num > random && num == random + 2)
 				{
 					count++;
 					def++;
 					System.out.println("졌습니다 ㅠㅠ");
 				}
+				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 2 작을 경우
 				else
 				{
 					count++;
