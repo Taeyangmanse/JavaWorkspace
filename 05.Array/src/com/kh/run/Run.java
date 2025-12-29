@@ -2,6 +2,7 @@ package com.kh.run;
 
 import com.kh.array.A_Array;
 import com.kh.array.B_ArrayCopy;
+import com.kh.array.C_DimensionalArray;
 
 public class Run 
 {
@@ -22,6 +23,12 @@ public class Run
 //		arrB.method1();
 //		arrB.method2();
 //		arrB.method3();
-		arrB.method4();
+//		arrB.method4();
+		
+		C_DimensionalArray arrC = new C_DimensionalArray();
+		
+//		arrC.method1();
+//		arrC.method2();
+		arrC.method4();
 	}
 }
