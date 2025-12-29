@@ -400,9 +400,96 @@ public class ArrayPractice
 						arr[i] = i + 1;
 						System.out.print(arr[i] + " ");
 					}
+					else
+					{
+						arr[i] = arr.length - i;
+						System.out.print(arr[i] + " ");
+					}
 				}
 			}
 			System.out.println();
+		}
+	}
+	
+	public void practice12()
+	{
+		/*
+		 * 사용자가 입력한 배열의 길이만큼의 문자열 배열을 선언 및 할당하고
+		 * 배열의 인덱스에 넣을 값 역시 사용자가 입력하여 초기화 하세요.
+		 * 단, 사용자에게 배열에 값을 더 넣을지 물어보고 몇 개를 더 입력할 건지,
+		 * 늘린 곳에 어떤 데이터를 넣을 것인지 받으세요.
+		 * 사용자가 더 이상 입력하지 않겠다고 하면 배열 전체 값을 출력하세요.
+		 * 
+		 * ex)
+		 * 배열의 크기를 입력하세요 : 3
+		 * 1번째 문자열 : 자바의 정석
+		 * 2번째 문자열 : 알고리즘
+		 * 3번째 문자열 : C프로그래밍
+		 * 더 값을 입력하시겠습니까?(Y/N) : y
+		 * 더 입력하고 싶은 개수 : 2
+		 * 4번째 문자열 : 인간관계
+		 * 5번째 문자열 : 자기계발
+		 * 더 값을 입력하시겠습니까?(Y/N) : y
+		 * 더 입력하고 싶은 개수 : 1
+		 * 6번째 문자열 : 영단어600
+		 * 더 값을 입력하시겠습니까?(Y/N) : n
+		 * [자바의 정석, 알고리즘, C프로그래밍, 인간관계, 자기계발, 영단어600]
+		 */
+		
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int num1 = sc.nextInt();
+		
+		int count = 1;
+		
+		String arr1[] = new String[num1];
+		
+		for (int i = 0; i < arr1.length; i++)
+		{
+			
+			System.out.printf("\n%d번째 문자열 : ", i);
+			String str = sc.next();
+			
+			arr1[i] = str;
+		}
+		
+		while (true)
+		{			
+			System.out.print("더 값을 입력하시겠습니까? (Y/N) : ");
+			char ch = sc.next().charAt(0);
+			
+			if (ch == 'Y' || ch == 'y')
+			{
+				count++;
+				System.out.print("더 입력하고 싶은 개수 : ");
+				int num2 = sc.nextInt();
+				
+				num1 += num2;
+				
+				String arr2[] = new String[num1];
+				
+				for (int i = 0; i < arr2.length; i++)
+				{
+					if (i < arr1.length)
+					{
+						arr2[i] = arr1[i];
+					}
+					else
+					{
+						System.out.printf("%d번째 문자열 : ", i);
+						String str = sc.next();
+						
+						arr2[i] = str;
+					}
+				}
+				
+				// 얕은 복사를 통해 arr1이 arr2의 주소를 참조하도록 함
+				arr1 = arr2;
+			}
+			else
+			{
+				System.out.println(Arrays.toString(arr1));
+				break;
+			}
 		}
 	}
 }
