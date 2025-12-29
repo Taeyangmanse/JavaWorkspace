@@ -1,5 +1,6 @@
 package com.kh.practice.comp.run;
 
+import com.kh.practice.comp.func.RockPaperScissors;
 import com.kh.practice.comp.func.UpAndDown;
 
 public class Run 
@@ -8,6 +9,10 @@ public class Run
 	{
 		UpAndDown ud = new UpAndDown();
 		
-		ud.upDown();
+//		ud.upDown();
+		
+		RockPaperScissors rps = new RockPaperScissors();
+		
+		rps.rps();
 	}
 }

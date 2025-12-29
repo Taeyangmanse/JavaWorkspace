@@ -22,29 +22,17 @@ public class RockPaperScissors
 		String pp = "보";
 		String rc = "바위";
 		
+		int count = 0;
+		int win = 0;
+		int def = 0;
+		int bb = 0;
+		
 		while (true)
 		{
 			int random = (int)(Math.random() * 3 + 1);
 			String com = "";
-			int num = 1;
 			
-			System.out.print("가위바위보 : ");
-			String rsp = sc.next();
-			
-			switch (rsp)
-			{
-			case "가위":
-				num = 1;
-				break;
-			case "바위":
-				num = 2;
-				break;
-			case "보":
-				num = 3;
-				break;	
-			default:
-				System.out.println("잘못 입력하셨습니다.");
-			}
+			int num = 0;
 			
 			switch (random)
 			{
@@ -59,10 +47,67 @@ public class RockPaperScissors
 				break;
 			}	
 			
-			System.out.println("컴퓨터 : " + com);
-			System.out.printf("%s : %s\n", name, rsp);
+			System.out.print("가위바위보 : ");
+			String rsp = sc.next();
 			
-			
+			if (rsp.equals("exit"))
+			{
+				System.out.printf("%d전 %d승 %d무 %d패", count, win, bb, def);
+				break;
+			}
+			else if (rsp.equals(rc) || rsp.equals(ss) || rsp.equals(pp))
+			{
+				switch (rsp)
+				{
+				case "가위":
+					num = 1;
+					break;
+				case "바위":
+					num = 2;
+					break;
+				case "보":
+					num = 3;
+					break;
+				}
+				
+				System.out.println("컴퓨터 : " + com);
+				System.out.printf("%s : %s\n", name, rsp);
+				
+				if (num == random)
+				{
+					count++;
+					bb++;
+					System.out.println("비겼습니다.");
+				}
+				else if (num > random && num == random + 1)
+				{
+					count++;
+					win++;
+					System.out.println("이겼습니다!");
+				}
+				else if (num < random && num == random - 1)
+				{
+					count++;
+					def++;
+					System.out.println("졌습니다 ㅠㅠ");
+				}
+				else if (num > random && num == random + 2)
+				{
+					count++;
+					def++;
+					System.out.println("졌습니다 ㅠㅠ");
+				}
+				else if (num < random && num == random - 2)
+				{
+					count++;
+					win++;
+					System.out.println("이겼습니다!");
+				}
+			}
+			else
+			{
+				System.out.println("잘못 입력하셨습니다.");
+			}	
 		}
 	}
 }
