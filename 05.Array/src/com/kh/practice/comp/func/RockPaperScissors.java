@@ -97,7 +97,7 @@ public class RockPaperScissors
 					def++;
 					System.out.println("졌습니다 ㅠㅠ");
 				}
-				else if (num < random && num == random - 2)
+				else
 				{
 					count++;
 					win++;
