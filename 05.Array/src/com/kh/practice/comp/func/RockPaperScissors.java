@@ -96,33 +96,19 @@ public class RockPaperScissors
 					bb++;
 					System.out.println("비겼습니다.");
 				}
-				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 1 큰 경우
-				else if (num > random && num == random + 1)
+				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 1 큰 경우와 플레이어가 낸 수가 컴퓨터가 낸 수보다 2 작을 경우 이김
+				else if ((num > random && num == random + 1) || num < random && num == random - 2)
 				{
 					count++;
 					win++;
 					System.out.println("이겼습니다!");
 				}
-				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 1 작을 경우
-				else if (num < random && num == random - 1)
+				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 1 작을 경우와 플레이어가 낸 수가 컴퓨터가 낸 수보다 2 클 경우 이김
+				else if ((num < random && num == random - 1) || (num > random && num == random + 2))
 				{
 					count++;
 					def++;
 					System.out.println("졌습니다 ㅠㅠ");
-				}
-				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 2 클 경우
-				else if (num > random && num == random + 2)
-				{
-					count++;
-					def++;
-					System.out.println("졌습니다 ㅠㅠ");
-				}
-				// 만약, 플레이어가 낸 수가 컴퓨터가 낸 수보다 2 작을 경우
-				else
-				{
-					count++;
-					win++;
-					System.out.println("이겼습니다!");
 				}
 			}	
 		}
