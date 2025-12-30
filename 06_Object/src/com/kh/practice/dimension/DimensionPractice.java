@@ -224,7 +224,7 @@ public class DimensionPractice
 			}
 			else
 			{
-				int arr[][] = new int[row][column];
+				char arr[][] = new char[row][column];
 				
 				for (int i = 0; i < arr.length; i++)
 				{
@@ -251,7 +251,110 @@ public class DimensionPractice
 					}
 					System.out.println();
 				}
+				
+				break;
 			}
 		}
+	}
+	
+	public void practice6()
+	{
+		/*
+		 * String[][] strArr = new String[][] {{"이", "까", "왔", "앞", "힘"}, {"차", "지", "습", "으", "냅"}, {"원", 
+		 * "열", "니", "로", "시"}, {"배", "심", "다", "좀", "다"}, {"열", "히", "! ", "더", "!! "}};
+		 * 
+		 * 위의 초기화되어 있는 배열을 가지고 아래의 ‘[그림] 실습문제4 흐름’과 같은 방식으로 출력하세요.
+		 * 단, print()를 사용하고 값 사이에 띄어쓰기(“ “)가 존재하도록 출력하세요.
+		 */
+		
+		String strArr[][] = new String[][] {{"이", "까", "왔", "앞", "힘"}, {"차", "지", "습", "으", "냅"}, {"원", "열", "니", "로", "시"}, {"배", "심", "다", "좀", "다"}, {"열", "히", "! ", "더", "!! "}};
+		
+		for (int i = 0; i < strArr.length; i++)
+		{
+			for (int j = 0; j < strArr[i].length; j++)
+			{
+				System.out.print(strArr[j][i] + " ");
+			}
+		}
+	}
+	
+	public void practice7()
+	{
+		/*
+		 * 사용자에게 행의 크기를 입력 받고 그 수만큼의 반복을 통해 열의 크기도 받아 
+		 * 문자형 가변 배열을 선언 및 할당하세요.
+		 * 그리고 각 인덱스에 ‘a’부터 총 인덱스의 개수만큼 하나씩 늘려 저장하고 출력하세요.
+		 * 
+		 * ex)
+		 * 행의 크기 : 4
+		 * 0행의 열 크기 : 2
+		 * 1행의 열 크기 : 6
+		 * 2행의 열 크기 : 3
+		 * 3행의 열 크기 : 5
+		 * a b
+		 * c d e f g h
+		 * i j k
+		 * l m n o p 
+		 */
+		
+		System.out.print("행의 크기 : ");
+		int size = sc.nextInt();
+		char arr[][] = new char[size][];
+		
+		for (int i = 0; i < size; i++)
+		{
+			System.out.printf("%d행의 열 크기 : ", i);
+			int rowSize = sc.nextInt();
+			arr[i] = new char[rowSize];
+		}
+		
+		char ch = 'a';
+		
+		for (int i = 0; i < arr.length; i++)
+		{
+			for (int j = 0; j < arr[i].length; j++)
+			{
+				arr[i][j] = ch;
+				ch++;
+			}
+		}
+		
+		for (int i = 0; i < arr.length; i++)
+		{
+			for (int j = 0; j < arr[i].length; j++)
+			{
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void practice8()
+	{
+		/*
+		 * 1차원 배열에 12명의 학생들을 출석부 순으로 초기화 하고 
+		 * 2열 3행으로 2차원 배열 2개를 이용하여 분단을 나눠
+		 * 1분단 왼쪽부터 오른쪽, 1행에서 아래 행 순으로 자리를 배치하세요.
+		 * <출석부>
+		 * 1. 강건강 2. 남나나 3. 도대담 4. 류라라 5. 문미미 6. 박보배
+		 * 7. 송성실 8. 윤예의 9. 진재주 10. 차천축 11. 피풍표 12. 홍하하
+		 * 
+		 * ex)
+		 * == 1분단 ==
+		 * 강건강  남나나
+		 * 도대담  류라라
+		 * 문미미  박보배
+		 * == 2분단 ==
+		 * 송성실  윤예의
+		 * 진재주  차천축
+		 * 피풍표  홍하하
+		 */
+		
+		String arr[] = new String[] {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하"};
+		
+		String arr1[][] = new String[3][2];
+		String arr2[][] = new String[3][2];
+		
+		
 	}
 }

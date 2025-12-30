@@ -29,6 +29,20 @@ public class FieldTest1
 	
 	// 전역 변수는 힙 영역이기 때문에 절대로 비어있지 않음. 따라서 초기화 하지 않아도 호출하는데 전혀 문제가 없음
 	private int global;
+	{
+		// 초기화 블럭
+		// 객체 생성 시 최초 1회 실행
+		global = 50;
+	}
+	
+	public static int num;
+	// static 초기화 블럭
+	static 
+	{
+		// static 변수를 초기화 하는데 사용한다.
+		// 프로그램 실행될 때 최초 1번 실행
+		num = 55;
+	}
 	
 	// 메서드 호출을 위해선 "반드시!!" 매개변수를 전달해야 하므로 값의 초기화는 보장된 것이다.
 	private void test(int num)
