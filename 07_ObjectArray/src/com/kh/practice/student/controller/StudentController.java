@@ -39,10 +39,8 @@ public class StudentController
 	// double 배열을 만들어 sumScore의 리턴 값을 0번째 인덱스에 저장하고 합의 평균을 1번째 인덱스에 저장한 후 배열 리턴
 	public double[] avgScore()
 	{
-		double dArr[] = new double[2];
-		dArr[0] = sumScore();
-		dArr[1] = sumScore() / 5;
+		double avg[] = { (double)sumScore(), ((double)sumScore() / sArr.length) };
 		
-		return dArr;
+		return avg;
 	}
 }
