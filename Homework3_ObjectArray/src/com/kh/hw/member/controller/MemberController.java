@@ -1,7 +1,5 @@
 package com.kh.hw.member.controller;
 
-import java.util.Scanner;
-
 import com.kh.hw.member.model.vo.Member;
 
 public class MemberController 
@@ -31,7 +29,7 @@ public class MemberController
 		boolean isDup = false;
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getId() == inputId)
+			if (m[i] != null && m[i].getId().equals(inputId))
 			{
 				isDup = true;
 				break;
@@ -43,12 +41,19 @@ public class MemberController
 	// Member 객체를 객체 배열에 저장하는 메서드
 	public void insertMember(String id, String name, String password, String email, char gender, int age)
 	{
-		for (int i = 0; i < existMemberNum(); i++)
+		if (existMemberNum() == 0)
 		{
-			if (i == existMemberNum() - 1)
+			m[0] = new Member(id, name, password, email, gender, age);
+		}
+		else
+		{
+			for (int i = 0; i <= existMemberNum(); i++)
 			{
-				m[i] = new Member(id, name, password, email, gender, age);
-				break;
+				if (i == existMemberNum())
+				{
+					m[i] = new Member(id, name, password, email, gender, age);
+					break;
+				}
 			}
 		}
 	}
@@ -59,63 +64,92 @@ public class MemberController
 		boolean isSearched = false;
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getId() == id)
+			if (m[i] != null)
 			{
-				isSearched = true;
-				break;
+				if (m[i].getId().equals(id))
+				{
+					System.out.println("찾으신 회원 조회 결과입니다.");
+					return m[i].inform();
+				}
 			}
 		}
-		if (isSearched)
-		{
-			return "찾으신 회원 조회 결과입니다.";
-		}
-		else
-		{
-			return "검색 결과가 없습니다.";
-		}
+		return "검색 결과가 없습니다.";
 	}
 	
 	// 이름으로 회원을 조회하는 메서드
 	public Member[] searchName(String name)
 	{
-		Member[] mArr;
-		
 		int count = 0;
 		
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getName() == name)
+			if (m[i] != null && m[i].getName().equals(name))
 			{
 				count++;
-				break;
 			}
 		}
 		
-		mArr = new Member[count];
-		
-		return mArr;
-		
+		if (count == 0)
+		{
+			System.out.println("검색 결과가 없습니다.");
+			
+			return null;
+		}
+		else 
+		{
+			Member[] mArr = new Member[count];
+			
+			int index = 0;
+			
+			for (int i = 0; i < m.length; i++)
+			{
+				if (m[i] != null && m[i].getName().equals(name))
+				{
+					mArr[index] = m[i];
+					index++;
+				}
+			}
+			
+			return mArr;
+		}
 	}
 	
 	// 이메일로 회원을 조회하는 메서드
 	public Member[] searchEmail(String email)
-	{
-Member[] mArr;
-		
+	{		
 		int count = 0;
 		
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getEmail() == email)
+			if (m[i] != null && m[i].getEmail().equals(email))
 			{
 				count++;
-				break;
 			}
 		}
 		
-		mArr = new Member[count];
-		
-		return mArr;
+		if (count == 0)
+		{
+			System.out.println("검색 결과가 없습니다.");
+			
+			return null;
+		}
+		else
+		{
+			Member[] mArr = new Member[count];
+			
+			int index = 0;
+			
+			for (int i = 0; i < m.length; i++)
+			{
+				if (m[i] != null && m[i].getName().equals(email))
+				{
+					mArr[index] = m[i];
+					index++;
+				}
+			}
+			
+			return mArr;
+		}
 	}
 	
 	// 비밀번호 변경 메서드
@@ -124,7 +158,7 @@ Member[] mArr;
 		boolean isSearched = false;
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getId() == id)
+			if (m[i] != null && m[i].getId().equals(id))
 			{
 				m[i].setPassword(password);
 				isSearched = true;
@@ -140,7 +174,7 @@ Member[] mArr;
 		boolean isSearched = false;
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getId() == id)
+			if (m[i] != null && m[i].getId().equals(id))
 			{
 				m[i].setName(name);
 				isSearched = true;
@@ -156,7 +190,7 @@ Member[] mArr;
 		boolean isSearched = false;
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getId() == id)
+			if (m[i] != null && m[i].getId().equals(id))
 			{
 				m[i].setEmail(email);
 				isSearched = true;
@@ -172,7 +206,7 @@ Member[] mArr;
 		boolean isSearched = false;
 		for (int i = 0; i < m.length; i++)
 		{
-			if (m[i].getId() == id)
+			if (m[i] != null && m[i].getId().equals(id))
 			{
 				m[i] = null;
 				isSearched = true;
