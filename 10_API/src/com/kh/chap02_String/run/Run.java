@@ -14,6 +14,14 @@ public class Run
 		
 		B_StringBuilderAndBuffer sbb = new B_StringBuilderAndBuffer();
 		
-		sbb.method();
+//		sbb.method();
+		
+		C_StringTokenizer stC = new C_StringTokenizer();
+		
+//		stC.method();
+		
+		D_StringMethod smD = new D_StringMethod();
+		
+		smD.method();
 	}
 }
