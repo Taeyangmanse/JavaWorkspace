@@ -25,6 +25,6 @@ public class CookBook extends Book
 	@Override
 	public String toString() 
 	{
-		return "";
+		return String.format("%s 쿠폰 유무 : %b", super.toString(), this.coupon);
 	}
 }

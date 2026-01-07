@@ -36,16 +36,25 @@ public class LibraryController
 		int BookCount = 0;
 		Book[] bookInKeyword;
 		int bookIndex = 0;
+		
 		for (Book b : bList)
 		{
 			boolean inKeyword = false;
+			
 			for (int i = 0; i < b.getTitle().length(); i++)
 			{
 				if (b.getTitle().charAt(i) == keyword.charAt(0))
 				{
 					int index = i;
+					
 					for (int j = 0; j < keyword.length(); j++)
 					{
+						if (index >= b.getTitle().length())
+	                    {
+	                        inKeyword = false;
+	                        break;
+	                    }
+						
 						if (b.getTitle().charAt(index) == keyword.charAt(j))
 						{
 							inKeyword = true;
@@ -72,13 +81,21 @@ public class LibraryController
 		for (Book b : bList)
 		{
 			boolean inKeyword = false;
+			
 			for (int i = 0; i < b.getTitle().length(); i++)
 			{
 				if (b.getTitle().charAt(i) == keyword.charAt(0))
 				{
 					int index = i;
+					
 					for (int j = 0; j < keyword.length(); j++)
 					{
+						if (index >= b.getTitle().length())
+	                    {
+	                        inKeyword = false;
+	                        break;
+	                    }
+						
 						if (b.getTitle().charAt(index) == keyword.charAt(j))
 						{
 							inKeyword = true;
@@ -93,11 +110,15 @@ public class LibraryController
 					
 					if (inKeyword)
 					{
-						bookInKeyword[bookIndex] = b;
-						bookIndex++;
 						break;
 					}
 				}
+			}
+			
+			if (inKeyword)
+			{
+				bookInKeyword[bookIndex] = b;
+				bookIndex++;
 			}
 		}
 		
@@ -115,14 +136,13 @@ public class LibraryController
 			{
 				result = 1;
 			}
-			else if (((CookBook)bList[index]).isCoupon())
+		}
+		else if (bList[index] instanceof CookBook)
+		{
+			if (((CookBook)bList[index]).isCoupon())
 			{
 				mem.setCouponCount(mem.getCouponCount() + 1);
 				result = 2;
-			}
-			else
-			{
-				result = 0;
 			}
 		}
 		

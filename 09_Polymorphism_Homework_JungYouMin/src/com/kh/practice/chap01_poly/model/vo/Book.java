@@ -1,6 +1,6 @@
 package com.kh.practice.chap01_poly.model.vo;
 
-public abstract class Book 
+public class Book 
 {
 	private String title;
 	private String author;
@@ -46,5 +46,8 @@ public abstract class Book
 	}
 
 	@Override
-	public abstract String toString();
+	public String toString()
+	{
+		return String.format("제목 : %s, 작가 : %s, 출판사 : %s", this.title, this.author, this.publisher);
+	}
 }

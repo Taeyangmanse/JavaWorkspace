@@ -25,6 +25,6 @@ public class AniBook extends Book
 	@Override
 	public String toString() 
 	{
-		return "";
+		return String.format("%s 연령 제한 : %d", super.toString(), this.accessAge);
 	}
 }

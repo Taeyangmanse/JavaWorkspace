@@ -38,30 +38,30 @@ public class LibraryMenu
 			System.out.print("메뉴 번호 : ");
 			int menuNum = sc.nextInt();
 			
-			if (!((menuNum >= 1 && menuNum <= 4)) || menuNum == 9)
+			switch (menuNum)
 			{
+			case 1:
+				lc.myInfo();
+				break;
+				
+			case 2:
+				this.selectAll();
+				break;
+				
+			case 3:
+				this.searchBook();
+				break;
+				
+			case 4:
+				this.rentBook();
+				break;
+				
+			case 9:
+				System.out.println("프로그램을 종료합니다.");
+				break Main;
+				
+			default:
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
-			}
-			else 
-			{
-				switch (menuNum)
-				{
-				case 1:
-					lc.myInfo();
-					break;
-				case 2:
-					this.selectAll();
-					break;
-				case 3:
-					this.searchBook();
-					break;
-				case 4:
-					this.rentBook();
-					break;
-				default:
-					System.out.println("프로그램을 종료합니다.");
-					break Main;
-				}
 			}
 		}
 	}
@@ -74,11 +74,11 @@ public class LibraryMenu
 		{
 			if (bList[i] instanceof CookBook)
 			{
-				System.out.println(String.format("%d번 도서: %s / %s / %s / %b\n", i, bList[i].getTitle(), bList[i].getAuthor(), bList[i].getPublisher(), (((CookBook)bList[i]).isCoupon())));
+				System.out.println(String.format("%d번 도서: %s \n", i, bList[i].toString()));
 			}
 			else if (bList[i] instanceof AniBook)
 			{
-				System.out.println(String.format("%d번 도서: %s / %s / %s / %d\n", i, bList[i].getTitle(), bList[i].getAuthor(), bList[i].getPublisher(), (((AniBook)bList[i]).getAccessAge())));
+				System.out.println(String.format("%d번 도서: %s \n", i, bList[i].toString()));
 			}
 		}
 	}
@@ -92,7 +92,7 @@ public class LibraryMenu
 		
 		for (Book b : searchList)
 		{
-			System.out.println(b);
+			System.out.println(b.toString());
 		}
 	}
 	
