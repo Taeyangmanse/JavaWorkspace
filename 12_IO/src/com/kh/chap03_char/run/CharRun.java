@@ -1,0 +1,45 @@
+package com.kh.chap03_char.run;
+
+import com.kh.chap03_char.model.vo.FileCharDao;
+
+public class CharRun 
+{
+	public static void main(String[] args) 
+	{
+		/*
+		 * 문자 기반 스트림
+		 * - 외부 매체를 지정하여 외부 매체와 연결하는 역할을 수행
+		 * - 연결된 외부 매체와 2byte 단위로 데이터를 주고 받는 역할을 수행
+		 * - XXXReader / XXXWriter
+		 * 
+		 */
+		
+		FileCharDao dao = new FileCharDao();
+		
+		dao.fileSave();
+		dao.fileRead();
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

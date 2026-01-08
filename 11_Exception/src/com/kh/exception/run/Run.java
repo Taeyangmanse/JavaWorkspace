@@ -1,10 +1,10 @@
 package com.kh.exception.run;
 
-import com.kh.exception.model.vo.A_UnChecked;
+import com.kh.exception.model.vo.*;
 
 public class Run 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args) throws C_CustomException 
 	{
 		/*
 		 * <에러(오류) 종류>
@@ -35,6 +35,29 @@ public class Run
 		 */
 		
 		A_UnChecked ucA = new A_UnChecked();
-		ucA.method1();
+//		ucA.method1();
+		
+		
+		// 에러 강제 발생
+		// throw new 에러 클래스 생성자(에러 메세지)
+		throw new C_CustomException("에러 발생");
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
