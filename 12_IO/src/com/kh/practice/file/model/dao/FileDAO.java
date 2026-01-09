@@ -1,5 +1,6 @@
 package com.kh.practice.file.model.dao;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -10,35 +11,9 @@ public class FileDAO
 	
 	public boolean checkName(String file)
 	{
-		FileReader fr = null;
+		File f = new File(file);
 		
-		try 
-		{
-			fr = new FileReader(file);
-		} 
-		catch (FileNotFoundException e) 
-		{
-			e.printStackTrace();
-		}
-		finally
-		{
-			try 
-			{
-				fr.close();
-			} 
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
-		}
-		
-		if (fr != null)
-		{
-			return true;
-		}
-		
-		return false;
-		
+		return f.exists();
 	}
 	
 	public void fileSave(String file, String s)

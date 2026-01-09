@@ -47,13 +47,13 @@ public class FileMenu
 	{
 		StringBuilder sb = new StringBuilder("");
 		
-		System.out.println("파일에 저장할 내용을 입력하세요.");
-		System.out.println("'exit' 또는 '끝' 이라고 입력하면 종료됩니다.");
-
 		while (true)
 		{
+			System.out.println("파일에 저장할 내용을 입력하세요.");
+			System.out.println("'exit' 또는 '끝' 이라고 입력하면 종료됩니다.");
+			
 			System.out.print("내용 : ");
-			String str = sc.nextLine();
+			String str = sc.next();
 			
 			if (str.equals("exit") || str.equals("끝"))
 			{
@@ -70,22 +70,28 @@ public class FileMenu
 			System.out.print("저장할 파일명을 입력해주세요(ex. myFile.txt) :");
 			String file = sc.next();
 			
-			if (fc.checkName(file))
+			if (!fc.checkName(file))
 			{
-				System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n) : ");
-				char ch = sc.next().charAt(0);
-				
-				if (ch == 'y' || ch == 'Y')
-				{
-					fc.fileSave(file, sb);
-					break;
-				}
+				fc.fileSave(file, sb);
+				return;
+			}
+			System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n) : ");
+			char ch = sc.next().toUpperCase().charAt(0);
+			
+			if (ch == 'Y')
+			{
+				fc.fileSave(file, sb);
+			}
+			else if (ch == 'N')
+			{
+				continue;
 			}
 			else
 			{
-				fc.fileSave(file, sb);
-				break;
+				System.out.println("잘못 입력하셨습니다.");
+				continue;
 			}
+			break;
 		}
 	}
 	
@@ -119,7 +125,7 @@ public class FileMenu
 			while (true)
 			{
 				System.out.print("내용 : ");
-				String string = sc.nextLine();
+				String string = sc.next();
 				
 				if (string.equals("exit") || string.equals("끝"))
 				{
