@@ -69,7 +69,7 @@ public class BookMenu
 		int year = Integer.parseInt(dateArr[0]);
 		int month = Integer.parseInt(dateArr[1]);
 		int day = Integer.parseInt(dateArr[2]);
-		date = new GregorianCalendar(year, month, day);
+		date = new GregorianCalendar(year, month-1, day);
 		
 		Book book = new Book(title, author, price, date, discount);
 		
