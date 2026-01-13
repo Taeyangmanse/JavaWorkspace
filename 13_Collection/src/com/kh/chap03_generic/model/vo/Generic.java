@@ -21,6 +21,28 @@ public class Generic < T, G >
 		return t;
 	}
 	
+	public void setT(T t)
+	{
+		this.t = t;
+	}
+
+	public G getG()
+	{
+		return g;
+	}
+
+	public void setG(G g) 
+	{
+		this.g = g;
+	}
+	
+	// 메서드 레벨 제네릭 설정
+	public static <V> void printTest(V item)
+	{
+		System.out.println(item);
+	}
+	
+	
 }
 
 

@@ -1,0 +1,6 @@
+package com.kh.practice.set.controller;
+
+public class LotteryController 
+{
+	
+}

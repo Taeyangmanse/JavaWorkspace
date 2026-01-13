@@ -1,0 +1,6 @@
+package com.kh.practice.set.view;
+
+public class LotteryMenu 
+{
+	
+}

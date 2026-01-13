@@ -1,0 +1,6 @@
+package com.kh.practice.set.model.vo;
+
+public class Lottery 
+{
+	
+}
