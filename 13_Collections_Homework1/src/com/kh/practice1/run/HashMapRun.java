@@ -27,7 +27,8 @@ public class HashMapRun <K, V>
 	
 	public HashMapRun(int capacity)
 	{
-		
+		this.capacity = capacity;
+		this.table = new Entry[capacity];
 	}
 	
 	public int getIndex(K key)
@@ -36,6 +37,7 @@ public class HashMapRun <K, V>
 		 * 저장 공간이 10이라면?
 		 * 122345 % 10 == 5 번 인덱스
 		 * 12331456678 % 10 == 8 번 인덱스
+		 * 7453985328 % 10 == 8번 인덱스
 		 */
 		int hash = key.hashCode();
 		
@@ -44,6 +46,7 @@ public class HashMapRun <K, V>
 	
 	public void put(K key, V value)
 	{
+		// getIndex 함수 호출 후 반환값으로 table의 index에 접근
 		int index = getIndex(key);
 		
 		if (table[index] == null)
@@ -58,31 +61,131 @@ public class HashMapRun <K, V>
 			if (table[index].key.equals(key))
 			{
 				table[index].value = value;
+				return;
+			}
+			else
+			{
+				// 2. key는 다르지만, hash 값이 우연히 일치한 경우
+//				table[index].next = new Entry<>(key, value, null);
+				
+				Entry<K, V> next = table[index];
+				
+				while(true)
+				{
+					// 다음으로 뽑은 Entry의 key값이 현재 전달받은 key값과 동일한 경우(중복)
+					if (next.key.equals(key))
+					{
+						next.value = value;
+						return;
+					}
+					
+					// 현재 Entry가 마지막 Entry인 경우
+					if (next.next == null)
+					{
+						next.next = new Entry<>(key, value, null);
+						break;
+					}
+					
+					next = next.next;
+				}
 			}
 			
-			// 2. key는 다르지만, hash 값이 우연히 일치한 경우
-			table[index].next = new Entry<>(key, value, null);
+			size++;
+			
 		}
 	}
 	
 	public V get(K key)
 	{
+		// getIndex함수 호출 후 반환 값으로 table의 index에 접근
+		int index = getIndex(key);
+		Entry<K, V> entry = table[index];
+		
+		if (entry == null)
+		{
+			return null;
+		}
+		
+		while(true)
+		{
+			if (entry == null)
+			{
+				break;
+			}
+			
+			if (entry.key.equals(key))
+			{
+				return entry.value;
+			}
+			
+			entry = entry.next;
+		}
+		
+		return null;
 		
 	}
 	
-	public boolean containsKey(String key)
+	public boolean containsKey(K key)
 	{
+		int index = getIndex(key);
 		
+		Entry<K, V> entry = table[index];
+		
+		if (entry == null)
+		{
+			return false;
+		}
+		
+		do
+		{
+			if (entry.key.equals(key))
+			{
+				return true;
+			}
+			
+			entry = entry.next;
+			
+		}
+		while(entry != null);
+		
+		return false;
 	}
 	
-	public void remove(String key)
+	public void remove(K key)
 	{
+		int index = getIndex(key);
 		
+		Entry<K, V> entry = table[index];
+		
+		if (entry == null)
+		{
+			return;
+		}
+		
+		Entry<K, V> prev = null;
+		
+		do
+		{
+			if (entry.key.equals(key))
+			{
+				if (table[index] == entry)
+				{
+					table[index] = entry.next;
+				}
+				else
+				{
+					prev.next = entry.next;
+				}
+			prev = entry;	// 이전 값 보관하기
+			entry = entry.next;
+			}			
+		}
+		while(entry != null);
 	}
 	
 	public int size()
 	{
-		
+		return size;
 	}
 	
 	public String toString()
@@ -116,7 +219,9 @@ public class HashMapRun <K, V>
 	
 	public static void main(String[] args)
 	{
-		
+//		HashMapRun<String, Snack> hm = new HashMapRun<>(10);
+//		hm.put("새우깡", new Snack("소금맛", 500));
+//		System.out.println(hm.get("새우깡"));
 	}
 }
 
