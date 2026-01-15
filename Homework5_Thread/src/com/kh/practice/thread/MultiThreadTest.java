@@ -6,13 +6,11 @@ public class MultiThreadTest
 	{
 		// 공유 데이터
 		Data data = new Data();
-		Thread putThread;
-		Thread getThread;
+		Thread putThread = new Provider(data);
+		Thread getThread = new Customer(data);
 		
-		Thread provider = new Thread(new Provider(data));
-		Thread customer = new Thread(new Customer(data));
 		
-		provider.start();
-		customer.start();
+		putThread.start();
+		getThread.start();
 	}
 }

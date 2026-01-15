@@ -14,7 +14,7 @@ public class Customer extends Thread
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			data.getValue();
+			int value = data.getValue();
 			
 			try
 			{

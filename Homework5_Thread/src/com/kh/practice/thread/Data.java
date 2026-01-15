@@ -16,7 +16,7 @@ public class Data
 	{
 		synchronized (this)
 		{
-			if (isEmpty)
+			if (!isEmpty)
 			{
 				try 
 				{
@@ -30,6 +30,7 @@ public class Data
 			
 			isEmpty = false;
 			this.value = value;
+			System.out.println("put value : " + value);
 			
 			notify();
 			
@@ -40,19 +41,30 @@ public class Data
 	{
 		synchronized (this)
 		{
-			if (isEmpty == false)
+			if (isEmpty)
 			{
 				try
 				{
-					wait();
+					throw new EmptyException("현재 입력된 값이 없습니다. 기다리십시오...");
+					
 				} 
-				catch (InterruptedException e) 
+				catch (EmptyException e) 
 				{
-					e.printStackTrace();
-				}
+					String errMasage = e.getMessage();
+					System.out.println(errMasage);
+					try 
+					{
+						wait();
+					} 
+					catch (InterruptedException e1) 
+					{
+						e1.printStackTrace();
+					}
+				}				
 			}
 			
 			isEmpty = true;
+			System.out.println("value : " + value);
 			
 			notify();
 			
