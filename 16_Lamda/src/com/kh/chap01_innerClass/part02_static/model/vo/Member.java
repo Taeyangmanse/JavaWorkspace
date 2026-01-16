@@ -1,0 +1,99 @@
+package com.kh.chap01_innerClass.part02_static.model.vo;
+
+public class Member 
+{
+	private String id;
+	private String name;
+	private int age;
+	
+	public Member() {}
+	
+	/*
+	 * Builder Pattern(빌더 패턴)
+	 * - 자바의 객체 생성 방식의 단점을 보완하기 위해 고안된 객체 생성 디자인 패턴
+	 * - 정적 내부 클래스를 활용하여 외부 클래스의 필드를 초기화하고, 외부 클래스의 객체를 최종적으로 생성하여 반환하는 방식
+	 * - 매개 변수 생성자가 많아지는 경우 사용을 고려하는 것이 좋다.
+	 * 
+	 * 기존 객체 생성 및 초기화 방식
+	 * 1) 생성자를 이용한 객체 생성 및 초기화
+	 * - 객체를 생성할 때, 매개변수를 전달하여 필드값을 초기화하는 방식
+	 * - 단점으로는, 필드가 많을 수록 만들어야하는 생성자가 많아질 수 있다.
+	 * - 생성자 매개변수의 정보를 설명할 수 없기 때문에 잘못된 값이 추가될 위험이 있다.
+	 * 
+	 * 2) setter 방식을 이용한 객체 초기화
+	 * - 추가해야 할 값의 정보를 확인할 수 있기 때문에 가독성은 좋으나,
+	 *   코드 길이가 길어질 수 있다.
+	 * - 객체의 불변성이 깨질 수 있다. 
+	 * 
+	 */
+	
+	
+	// 외부클래스명.Builder
+	public static class Builder 
+	{
+		private String id;
+		private String name;
+		private int age;
+		
+		public Builder() {}
+		
+		public Builder id(String id)
+		{
+			this.id = id;
+			
+			return this;
+		}
+		
+		public Builder name(String name)
+		{
+			this.name = name;
+			
+			return this;
+		}
+		
+		public Builder age(int age)
+		{
+			this.age = age;
+			
+			return this;
+		}
+		
+		// 빌드 메서드
+		// 빌더 클래스의 초기화된 데이터를 검증 후, 외부 클래스의 객체의 필드로 옮겨서 반환하는 메서드
+		public Member build()
+		{
+			Member m = new Member();
+			
+			if (id == null)
+			{
+				return null;
+			}
+			
+			// 옮겨 담기
+			m.id = id;
+			m.name = name;
+			m.age = age;
+			
+			return m;
+		}
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Member [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
